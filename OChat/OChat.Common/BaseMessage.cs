@@ -6,5 +6,6 @@ namespace OChat.Common
     {
         public Int32 MessageId { get; set; }
         public DateTime SendTimeUtc { get; set; }
+        public Int32 UrgencyLevel { get; set; }
     }
 }
