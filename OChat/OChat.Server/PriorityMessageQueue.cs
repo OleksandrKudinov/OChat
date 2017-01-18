@@ -13,6 +13,7 @@ namespace OChat.Server
 
         public void Handle(BaseMessage message)
         {
+            Wait();
             if (_messages.Count == 0)
             {
                 _messages.AddFirst(message);
@@ -35,14 +36,17 @@ namespace OChat.Server
                     _messages.AddAfter(current, message);
                 }
             }
+            Reset();
         }
 
-        public IEnumerable<BaseMessage> GetMessage()
+        public IEnumerable<BaseMessage> GetMessages()
         {
             while (_messages.Count > 0)
             {
+                Wait();
                 BaseMessage firstMessage = _messages.First.Value;
                 _messages.RemoveFirst();
+                Reset();
                 yield return firstMessage;
             }
         }
@@ -56,6 +60,19 @@ namespace OChat.Server
         {
             return this.GetMessage().GetEnumerator();
         }
+
+        private void Wait()
+        {
+            while (_isLocked) ;
+            _isLocked = true;
+        }
+
+        private void Reset()
+        {
+            _isLocked = false;
+        }
+
+        volatile bool _isLocked;
 
         private readonly LinkedList<BaseMessage> _messages;
     }
