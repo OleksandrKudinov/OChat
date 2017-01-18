@@ -43,6 +43,8 @@
     <Compile Include="BaseMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterMessage.cs" />
+    <Compile Include="ResponseMessage.cs" />
+    <Compile Include="StatusCode.cs" />
     <Compile Include="TextMessage.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
