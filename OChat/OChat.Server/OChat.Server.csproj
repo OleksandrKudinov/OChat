@@ -43,6 +43,12 @@
     <Compile Include="IMessageHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OChat.Common\OChat.Common.csproj">
+      <Project>{ca656b54-e903-4dc4-8dd4-57d6f9c7ae91}</Project>
+      <Name>OChat.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
