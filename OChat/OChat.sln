@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OChat.Common", "OChat.Common\OChat.Common.csproj", "{CA656B54-E903-4DC4-8DD4-57D6F9C7AE91}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{1C1FF884-C74D-45D3-8BC4-46AEF1B83EB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OChat.Client", "OChat.Client\OChat.Client.csproj", "{65D98C2C-C2C7-4616-B82B-78230C2E72C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +19,15 @@ Global
 		{CA656B54-E903-4DC4-8DD4-57D6F9C7AE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA656B54-E903-4DC4-8DD4-57D6F9C7AE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA656B54-E903-4DC4-8DD4-57D6F9C7AE91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65D98C2C-C2C7-4616-B82B-78230C2E72C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65D98C2C-C2C7-4616-B82B-78230C2E72C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65D98C2C-C2C7-4616-B82B-78230C2E72C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65D98C2C-C2C7-4616-B82B-78230C2E72C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{65D98C2C-C2C7-4616-B82B-78230C2E72C8} = {1C1FF884-C74D-45D3-8BC4-46AEF1B83EB7}
 	EndGlobalSection
 EndGlobal
