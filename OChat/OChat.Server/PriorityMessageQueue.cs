@@ -53,12 +53,12 @@ namespace OChat.Server
 
         public IEnumerator<BaseMessage> GetEnumerator()
         {
-            return this.GetMessage().GetEnumerator();
+            return this.GetMessages().GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return this.GetMessage().GetEnumerator();
+            return this.GetMessages().GetEnumerator();
         }
 
         private void Wait()
