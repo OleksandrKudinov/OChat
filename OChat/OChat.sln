@@ -5,11 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OChat.Common", "OChat.Common\OChat.Common.csproj", "{CA656B54-E903-4DC4-8DD4-57D6F9C7AE91}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{A4B9AE63-C89F-4DEF-8FDD-737F098DF91C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OChat.Server", "OChat.Server\OChat.Server.csproj", "{59E9A32F-89BA-4949-B832-32ED57689C46}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OChat.Database", "OChat.Database\OChat.Database.csproj", "{CE893DD9-5A49-4A1E-A8BD-6536375A37DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{8363B482-01AE-4019-91B8-C93FFE4131F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +34,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{59E9A32F-89BA-4949-B832-32ED57689C46} = {A4B9AE63-C89F-4DEF-8FDD-737F098DF91C}
+		{59E9A32F-89BA-4949-B832-32ED57689C46} = {8363B482-01AE-4019-91B8-C93FFE4131F8}
+		{CE893DD9-5A49-4A1E-A8BD-6536375A37DE} = {8363B482-01AE-4019-91B8-C93FFE4131F8}
 	EndGlobalSection
 EndGlobal
