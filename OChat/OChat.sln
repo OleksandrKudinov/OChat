@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OChat.Common", "OChat.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OChat.Database", "OChat.Database\OChat.Database.csproj", "{CE893DD9-5A49-4A1E-A8BD-6536375A37DE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{8363B482-01AE-4019-91B8-C93FFE4131F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CE893DD9-5A49-4A1E-A8BD-6536375A37DE} = {8363B482-01AE-4019-91B8-C93FFE4131F8}
 	EndGlobalSection
 EndGlobal
