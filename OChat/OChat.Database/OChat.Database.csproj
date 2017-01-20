@@ -54,6 +54,7 @@
     <Compile Include="Configuration\IDbModelConfigurator.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextMessageRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
