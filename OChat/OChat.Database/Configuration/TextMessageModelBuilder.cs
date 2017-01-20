@@ -9,7 +9,10 @@ namespace OChat.Database.Configuration
     {
         public void ConfigureDbModel(DbModelBuilder builder)
         {
-            throw new NotImplementedException();
+            builder.Entity<TextMessage>().HasKey<Int32>(m => m.MessageId);
+            builder.Entity<TextMessage>().Property(m => m.SendTimeUtc).HasColumnType("datetime2").IsRequired();
+            builder.Entity<TextMessage>().Property(m => m.UrgencyLevel).IsRequired();
+            builder.Entity<TextMessage>().Property(m => m.Text).IsRequired();
         }
     }
 }
