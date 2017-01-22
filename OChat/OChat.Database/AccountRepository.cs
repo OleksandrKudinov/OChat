@@ -23,7 +23,7 @@ namespace OChat.Database
                 Boolean isNewAccount = GetById(entity.AccountId) == null;
                 Boolean loginExists = context.Accounts.Any(acc => acc.Login == entity.Login);
 
-                if (isNewAccount && loginExists)
+                if (isNewAccount)
                 {
                     if (loginExists)
                     {
