@@ -17,6 +17,11 @@ namespace OChat.Database
             using (var context = new ApplicationDbContext())
             {
                 entity.AccountId = entity.AccountId ?? Guid.NewGuid().ToString();
+
+                if (context.Accounts.Any(acc => acc.Login == entity.Login))
+                {
+                    throw new InvalidOperationException($"Account '{entity.Login}' already exists");
+                }
                 context.Accounts.Add(entity);
                 // TODO use async
                 context.SaveChanges();
