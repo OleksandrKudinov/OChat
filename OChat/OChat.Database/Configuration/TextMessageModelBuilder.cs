@@ -13,6 +13,8 @@ namespace OChat.Database.Configuration
             builder.Entity<TextMessage>().Property(m => m.SendTimeUtc).HasColumnType("datetime2").IsRequired();
             builder.Entity<TextMessage>().Property(m => m.UrgencyLevel).IsRequired();
             builder.Entity<TextMessage>().Property(m => m.Text).IsRequired();
+            builder.Entity<TextMessage>().Property(m => m.SenderId).IsRequired();
+            builder.Entity<TextMessage>().Property(m => m.ReceiverId).IsRequired();
         }
     }
 }
