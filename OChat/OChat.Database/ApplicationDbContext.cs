@@ -19,5 +19,6 @@ namespace OChat.Database
         }
 
         public DbSet<TextMessage> TextMessages { get; set; }
+        public DbSet<Account> Accounts { get; set; }
     }
 }
