@@ -16,6 +16,7 @@ namespace OChat.Database
 
             using (var context = new ApplicationDbContext())
             {
+                entity.AccountId = entity.AccountId ?? Guid.NewGuid().ToString();
                 context.Accounts.Add(entity);
                 // TODO use async
                 context.SaveChanges();
