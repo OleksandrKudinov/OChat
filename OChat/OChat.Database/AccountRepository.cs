@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Data.Entity;
 using OChat.Common;
 
 namespace OChat.Database
@@ -16,7 +17,31 @@ namespace OChat.Database
 
             using (var context = new ApplicationDbContext())
             {
-                context.Accounts.Add(entity);
+                entity.Login = entity.Login.ToLower();
+                entity.AccountId = entity.AccountId ?? Guid.NewGuid().ToString();
+
+                Boolean isNewAccount = GetById(entity.AccountId) == null;
+                Boolean loginExists = context.Accounts.Any(acc => acc.Login == entity.Login);
+
+                if (isNewAccount && loginExists)
+                {
+                    if (loginExists)
+                    {
+                        throw new InvalidOperationException($"Account '{entity.Login}' already exists");
+                    }
+                    context.Accounts.Add(entity);
+                }
+                else
+                {
+                    // TODO allow to change login
+                    if (!loginExists)
+                    {
+                        throw new InvalidOperationException("You are not able to change your login. Please, contact support.");
+                    }
+                    context.Accounts.Attach(entity);
+                    context.Entry(entity).State = EntityState.Modified;
+                }
+
                 // TODO use async
                 context.SaveChanges();
             }
@@ -61,6 +86,7 @@ namespace OChat.Database
 
             using (var context = new ApplicationDbContext())
             {
+                context.Accounts.Attach(entity);
                 context.Accounts.Remove(entity);
                 //TODO use async 
                 context.SaveChanges();
