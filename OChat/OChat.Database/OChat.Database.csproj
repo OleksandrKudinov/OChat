@@ -53,8 +53,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountRepository.cs" />
     <Compile Include="ApplicationDbContext.cs" />
     <Compile Include="AutofacConfigurator.cs" />
+    <Compile Include="Configuration\AccountModelBuilder.cs" />
     <Compile Include="Configuration\TextMessageModelBuilder.cs" />
     <Compile Include="Configuration\IDbModelConfigurator.cs" />
     <Compile Include="IRepository.cs" />
