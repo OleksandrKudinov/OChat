@@ -3,7 +3,7 @@ using OChat.Common;
 
 namespace OChat.Server
 {
-    public sealed class GlobalMessageHandler : IMessageHandler<BaseMessage>
+    internal sealed class GlobalMessageHandler : IMessageHandler<BaseMessage>
     {
         public GlobalMessageHandler(IMessageHandlerProvider messageHandlerProvider)
         {
