@@ -67,6 +67,7 @@ namespace OChat.Database
 
             using (var context = new ApplicationDbContext())
             {
+                context.Accounts.Attach(entity);
                 context.Accounts.Remove(entity);
                 //TODO use async 
                 context.SaveChanges();
