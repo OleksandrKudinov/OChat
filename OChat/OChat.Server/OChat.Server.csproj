@@ -52,6 +52,13 @@
       <Project>{ca656b54-e903-4dc4-8dd4-57d6f9c7ae91}</Project>
       <Name>OChat.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OChat.Database\OChat.Database.csproj">
+      <Project>{ce893dd9-5a49-4a1e-a8bd-6536375a37de}</Project>
+      <Name>OChat.Database</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
