@@ -14,6 +14,7 @@ namespace OChat.Database
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             new TextMessageModelBuilder().ConfigureDbModel(modelBuilder);
+            new AccountModelBuilder().ConfigureDbModel(modelBuilder);
             base.OnModelCreating(modelBuilder);
         }
 
