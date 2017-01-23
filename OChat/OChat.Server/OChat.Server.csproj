@@ -47,6 +47,7 @@
     <Compile Include="AutofacConfigurator.cs" />
     <Compile Include="GlobalMessageHandler.cs" />
     <Compile Include="IChannel.cs" />
+    <Compile Include="IChannelListener.cs" />
     <Compile Include="IChannelProvider.cs" />
     <Compile Include="IMessageHandler.cs" />
     <Compile Include="IMessageHandlerProvider.cs" />
