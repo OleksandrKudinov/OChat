@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="AutofacConfigurator.cs" />
     <Compile Include="GlobalMessageHandler.cs" />
+    <Compile Include="IChannel.cs" />
     <Compile Include="IMessageHandler.cs" />
     <Compile Include="IMessageHandlerProvider.cs" />
     <Compile Include="IMultiObserver.cs" />
